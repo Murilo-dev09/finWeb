@@ -1,0 +1,1 @@
+ALTER TABLE transacoes CHANGE tipoTransacao tipo_transacao VARCHAR(100) NOT NULL;

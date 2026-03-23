@@ -1,7 +1,11 @@
-package com.finweb.finweb.model.transaction;
+package com.finweb.finweb.model.transacao;
 
 public enum CategoriaDespesa {
     MERCADO,
+    ALIMENTACAO,
+    LAZER,
+    TRANSPORTE,
+    SAUDE,
     ALUGUEL,
     ASSINATURA,
     FACULDADE,
@@ -9,5 +13,7 @@ public enum CategoriaDespesa {
     ENERGIA,
     AGUA,
     GASOLINA,
-    OUTROS
+    OUTROS,
+    INTERNET
+
 }
