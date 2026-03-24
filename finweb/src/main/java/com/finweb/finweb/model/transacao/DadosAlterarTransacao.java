@@ -1,6 +1,5 @@
-package com.finweb.finweb.model.transacao.dto;
+package com.finweb.finweb.model.transacao;
 
-import com.finweb.finweb.model.transacao.CategoriaDespesa;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;

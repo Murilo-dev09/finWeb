@@ -1,7 +1,6 @@
 package com.finweb.finweb.model.transacao;
 
-import com.finweb.finweb.model.transacao.dto.DadosAlterarTransacao;
-import com.finweb.finweb.model.transacao.dto.DadosNovaTransacao;
+import com.finweb.finweb.model.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -33,25 +32,16 @@ public class Transacao {
     @Enumerated(EnumType.STRING)
     private TipoTransacao tipoTransacao;
 
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
+
     public Transacao(DadosNovaTransacao dados) {
             this.descricao = dados.descricao();
             this.valor = dados.valor();
             this.data = dados.data();
             this.categoria = dados.categoria();
             this.tipoTransacao = dados.tipoTransacao();
-    }
-
-    public void alterarTransacao(DadosAlterarTransacao dados) {
-        if (dados.descricao() != null){
-            this.descricao = dados.descricao();
-        }
-
-        if (dados.valor() != null){
-            this.valor = dados.valor();
-        }
-
-        if (dados.categoria() != null){
-            this.categoria = dados.categoria();
-        }
     }
 }

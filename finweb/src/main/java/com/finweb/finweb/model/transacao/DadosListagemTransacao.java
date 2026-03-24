@@ -1,7 +1,4 @@
-package com.finweb.finweb.model.transacao.dto;
-import com.finweb.finweb.model.transacao.CategoriaDespesa;
-import com.finweb.finweb.model.transacao.TipoTransacao;
-import com.finweb.finweb.model.transacao.Transacao;
+package com.finweb.finweb.model.transacao;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
