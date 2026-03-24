@@ -25,8 +25,8 @@ public class TransacaoService {
     }
 
     @Transactional
-    public Transacao criarTransacao(DadosNovaTransacao dados, Long UsuarioId){
-        Usuario usuario = usuarioRepository.findById(UsuarioId)
+    public Transacao criarTransacao(DadosNovaTransacao dados, Long usuarioId){
+        Usuario usuario = usuarioRepository.findById(usuarioId)
                 .orElseThrow(() -> new RuntimeException("Usuario nao encontrado!"));
 
         Transacao transacao = new Transacao(dados);
