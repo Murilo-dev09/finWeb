@@ -47,9 +47,9 @@ public class TransacaoController {
     }
 
 
-    @DeleteMapping({"/{transacaoId}/usuario/{usuarioId}"})
-    public ResponseEntity<Void> excluirTransacao(@PathVariable Long transacaoId, @PathVariable Long usuarioId){
-        service.excluirTransacao(transacaoId, usuarioId);
+    @DeleteMapping({"/{transacaoId}"})
+    public ResponseEntity<Void> excluirTransacao(@PathVariable Long transacaoId, @AuthenticationPrincipal Usuario logado){
+        service.excluirTransacao(transacaoId, logado.getId());
         return ResponseEntity.noContent().build();
     }
 

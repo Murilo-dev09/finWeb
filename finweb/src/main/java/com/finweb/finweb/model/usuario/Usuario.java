@@ -1,7 +1,10 @@
 package com.finweb.finweb.model.usuario;
 
 import com.finweb.finweb.model.transacao.Transacao;
+import com.finweb.finweb.security.DadosLogin;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
@@ -32,6 +35,11 @@ public class Usuario implements UserDetails {
 
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Transacao> transacoes;
+
+    public Usuario(String email, String senha) {
+        this.email = email;
+        this.senha = senha;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

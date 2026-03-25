@@ -14,6 +14,9 @@ public enum CategoriaDespesa {
     AGUA,
     GASOLINA,
     OUTROS,
-    INTERNET
-
+    INTERNET,
+    VALE,
+    SALARIO,
+    RENDA_EXTRA,
+    VENDA
 }
