@@ -1,33 +1,30 @@
-HELP.md
+# --- Pastas de Compilação ---
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+bin/
+out/
+build/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# --- Arquivos da IDE (IntelliJ, VS Code, STS) ---
+.idea/
 *.iml
+*.iws
 *.ipr
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+.apt_generated
+.sts4-cache
+.springBeans
 
-### NetBeans ###
+# --- Maven Wrapper ---
+.mvn/wrapper/maven-wrapper.jar
+
+# --- Outros ---
+HELP.md
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
