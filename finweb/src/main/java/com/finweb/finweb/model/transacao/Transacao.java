@@ -27,7 +27,7 @@ public class Transacao {
     private LocalDateTime data;
 
     @Enumerated(EnumType.STRING)
-    private CategoriaDespesa categoria;
+    private CategoriaMovimentacao categoria;
 
     @Enumerated(EnumType.STRING)
     private TipoTransacao tipoTransacao;

@@ -7,13 +7,12 @@ public record DadosListagemTransacao(Long id,
                                      String descricao,
                                      BigDecimal valor,
                                      LocalDateTime data,
-                                     CategoriaDespesa categoria,
+                                     CategoriaMovimentacao categoria,
                                      TipoTransacao tipoTrasacao) {
 
     public DadosListagemTransacao(Transacao transacao){
         this(transacao.getId(), transacao.getDescricao(), transacao.getValor(),
              transacao.getData(), transacao.getCategoria(), transacao.getTipoTransacao());
     }
-
 
 }

@@ -1,6 +1,5 @@
 package com.finweb.finweb.model.transacao;
 
-import com.finweb.finweb.model.usuario.Usuario;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -18,7 +17,7 @@ public record DadosNovaTransacao(
         LocalDateTime data,
 
         @NotNull(message = "Escolher categoria é obrigatorio!")
-        CategoriaDespesa categoria,
+        CategoriaMovimentacao categoria,
 
         @NotNull(message = "Escolher tipo de transação é obrigatorio!")
         TipoTransacao tipoTransacao

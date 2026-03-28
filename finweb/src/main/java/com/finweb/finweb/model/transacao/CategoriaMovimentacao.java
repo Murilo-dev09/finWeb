@@ -1,6 +1,6 @@
 package com.finweb.finweb.model.transacao;
 
-public enum CategoriaDespesa {
+public enum CategoriaMovimentacao {
     MERCADO,
     ALIMENTACAO,
     LAZER,

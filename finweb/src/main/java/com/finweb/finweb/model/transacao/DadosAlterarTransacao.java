@@ -9,6 +9,6 @@ public record DadosAlterarTransacao(
         Long id,
         String descricao,
         BigDecimal valor,
-        CategoriaDespesa categoria
+        CategoriaMovimentacao categoria
 ) {
 }

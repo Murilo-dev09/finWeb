@@ -40,6 +40,16 @@ public class TransacaoService {
                 .map(DadosListagemTransacao::new);
     }
 
+    public DadosListagemCategoria listarCategorias(Pageable paginacao, Long usuarioId, CategoriaMovimentacao categoria){
+        var transacao = transacaoRepository.findByCategoriaAndUsuario_IdOrderByDataDesc(categoria, usuarioId, paginacao)
+                .map(DadosListagemTransacao::new);
+
+        BigDecimal somaTotal = transacaoRepository.somarValoresPorCategoriaEUsuario(categoria, usuarioId);
+        somaTotal = (somaTotal != null) ? somaTotal : BigDecimal.ZERO;
+
+        return new DadosListagemCategoria(transacao, somaTotal);
+    }
+
     @Transactional
     public Transacao atualizarTransacao(DadosAlterarTransacao dados, Long usuarioId){
         Transacao transacao = transacaoRepository.findById(dados.id())
@@ -87,4 +97,6 @@ public class TransacaoService {
 
         return new DadosResumoDashbord(receitas, despesas, saldo);
     }
+
+
 }

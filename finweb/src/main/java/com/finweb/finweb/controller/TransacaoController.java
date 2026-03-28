@@ -1,9 +1,6 @@
 package com.finweb.finweb.controller;
 
-import com.finweb.finweb.model.transacao.DadosResumoDashbord;
-import com.finweb.finweb.model.transacao.DadosAlterarTransacao;
-import com.finweb.finweb.model.transacao.DadosListagemTransacao;
-import com.finweb.finweb.model.transacao.DadosNovaTransacao;
+import com.finweb.finweb.model.transacao.*;
 import com.finweb.finweb.model.usuario.Usuario;
 import com.finweb.finweb.service.TransacaoService;
 import jakarta.validation.Valid;
@@ -38,6 +35,11 @@ public class TransacaoController {
     @GetMapping
     public ResponseEntity<Page<DadosListagemTransacao>> listarTransacoes(@ParameterObject @PageableDefault( size = 10, sort = {"data"})Pageable paginacao, @AuthenticationPrincipal Usuario logado){
         return ResponseEntity.ok(service.listarTransacoes(paginacao, logado.getId()));
+    }
+
+    @GetMapping("/por-categoria")
+    public ResponseEntity<DadosListagemCategoria> listarPorCategoria(@ParameterObject @PageableDefault( size = 10, sort = {"data"})Pageable paginacao, @RequestParam CategoriaMovimentacao categoria, @AuthenticationPrincipal Usuario logado){
+        return ResponseEntity.ok(service.listarCategorias(paginacao, logado.getId(), categoria));
     }
 
     @PutMapping

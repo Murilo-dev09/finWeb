@@ -25,6 +25,7 @@ public class SecurityConfigurations {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
+
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -32,9 +33,15 @@ public class SecurityConfigurations {
                         auth.requestMatchers("/swagger-ui.html", "/login/cadastrar", "/login", "/v3/api-docs/**", "/swagger-ui/**").permitAll()
                                 .anyRequest().authenticated()
                 )
+                .exceptionHandling(ex -> ex
+                        .authenticationEntryPoint((request, response, authException) -> {
+                            response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+                        })
+                )
                 .addFilterBefore(securityFilter,
                         UsernamePasswordAuthenticationFilter.class)
                 .build();
+
     }
 
     @Bean
