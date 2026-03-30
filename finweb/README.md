@@ -103,7 +103,7 @@ git clone https://github.com/seu-usuario/finweb.git
 ./mvnw spring-boot:run
 ```
 
-4. Acesse o Swagger (se disponível):
+4. Acesse o Swagger:
 
 ```
 http://localhost:8080/swagger-ui.html
