@@ -55,7 +55,7 @@ public class TransacaoController {
         return ResponseEntity.noContent().build();
     }
 
-    @GetMapping("/dashbord")
+    @GetMapping("/dashboard")
     public ResponseEntity<DadosResumoDashbord> dashboard(@AuthenticationPrincipal Usuario logado){
         return ResponseEntity.ok(service.resumoDashbord(logado.getId()));
     }
