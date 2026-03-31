@@ -1,6 +1,6 @@
-# 💰 FinWeb - API de Controle Financeiro
+# FinWeb - API de Controle Financeiro
 
-## 📌 Sobre o projeto
+## Sobre o projeto
 
 O **FinWeb** é uma API REST desenvolvida em Java com Spring Boot para gerenciamento financeiro pessoal.
 
@@ -13,14 +13,14 @@ A aplicação permite que cada usuário tenha controle total sobre suas transaç
 * 🔐 Autenticação de usuários (login com token JWT)
 * 👤 Cadastro de usuários
 * 💸 CRUD completo de transações:
-
+  
     * Criar transações
     * Listar transações
     * Atualizar transações
     * Deletar transações
 * 📂 Filtro de transações por categoria
 * 📊 Dashboard financeiro com:
-
+  
     * Total de receitas
     * Total de despesas
     * Saldo final
@@ -56,24 +56,24 @@ Authorization: Bearer SEU_TOKEN
 
 * `POST /login`
 
-### 👤 Usuários
+### 👤 Cadastrar Usuários
 
-* `POST /usuarios`
+* `POST /login/cadastrar`
 
 ### 💸 Transações
 
-* `GET /transacoes`
-* `POST /transacoes`
-* `PUT /transacoes`
-* `DELETE /transacoes/{id}`
+* `GET /transacoes` -> Listar
+* `POST /transacoes` -> Cadastrar
+* `PUT /transacoes` -> Atualizar
+* `DELETE /transacoes/{id}` -> Deletar por id
 
 ### 📂 Filtro por categoria
 
-* `GET /transacoes?categoria=ALIMENTACAO`
+* `GET /transacoes/por-categoria` -> Listar por categorias de despesas
 
 ### 📊 Dashboard
 
-* `GET /dashboard`
+* `GET /transacoes/dashboard` -> DashBoard de todas as receitas/despesas e seu saldo final
 
 ---
 
@@ -92,7 +92,8 @@ Authorization: Bearer SEU_TOKEN
 1. Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/finweb.git
+git clone https://github.com/seu-usuario/finweb.git](https://github.com/Murilo-dev09/finWeb.git
+
 ```
 
 2. Configure o banco de dados no `application.properties`
