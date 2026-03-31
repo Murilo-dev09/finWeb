@@ -8,18 +8,18 @@ A aplicação permite que cada usuário tenha controle total sobre suas transaç
 
 ---
 
-## 🚀 Funcionalidades
+##Funcionalidades
 
-* 🔐 Autenticação de usuários (login com token JWT)
-* 👤 Cadastro de usuários
-* 💸 CRUD completo de transações:
+* Autenticação de usuários (login com token JWT)
+* Cadastro de usuários
+* CRUD completo de transações:
   
     * Criar transações
     * Listar transações
     * Atualizar transações
     * Deletar transações
-* 📂 Filtro de transações por categoria
-* 📊 Dashboard financeiro com:
+* Filtro de transações por categoria
+* Dashboard financeiro com:
   
     * Total de receitas
     * Total de despesas
@@ -27,7 +27,7 @@ A aplicação permite que cada usuário tenha controle total sobre suas transaç
 
 ---
 
-## 🔒 Segurança
+## Segurança
 
 * Autenticação baseada em **JWT (JSON Web Token)**
 * Cada usuário acessa apenas seus próprios dados
@@ -39,7 +39,7 @@ Authorization: Bearer SEU_TOKEN
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 * Java
 * Spring Boot
@@ -50,34 +50,34 @@ Authorization: Bearer SEU_TOKEN
 
 ---
 
-## 📡 Endpoints principais
+## Endpoints principais
 
-### 🔐 Autenticação
+### Autenticação
 
 * `POST /login`
 
-### 👤 Cadastrar Usuários
+### Cadastrar Usuários
 
 * `POST /login/cadastrar`
 
-### 💸 Transações
+### Transações
 
 * `GET /transacoes` -> Listar
 * `POST /transacoes` -> Cadastrar
 * `PUT /transacoes` -> Atualizar
 * `DELETE /transacoes/{id}` -> Deletar por id
 
-### 📂 Filtro por categoria
+### Filtro por categoria
 
 * `GET /transacoes/por-categoria` -> Listar por categorias de despesas
 
-### 📊 Dashboard
+### Dashboard
 
 * `GET /transacoes/dashboard` -> DashBoard de todas as receitas/despesas e seu saldo final
 
 ---
 
-## 📈 Estrutura do projeto
+## Estrutura do projeto
 
 * `controller` → endpoints da API
 * `service` → regras de negócio
@@ -87,7 +87,7 @@ Authorization: Bearer SEU_TOKEN
 
 ---
 
-## ▶️ Como executar o projeto
+## Como executar o projeto
 
 1. Clone o repositório:
 
@@ -112,7 +112,7 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
-## 📌 Próximos passos
+## Próximos passos
 
 * Desenvolvimento do front-end
 * Melhorias na experiência do usuário
@@ -120,6 +120,6 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
-Desenvolvido por Murilo 🚀
+Desenvolvido por Murilo Morales
