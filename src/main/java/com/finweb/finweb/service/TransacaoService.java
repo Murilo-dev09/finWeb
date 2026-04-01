@@ -86,7 +86,7 @@ public class TransacaoService {
         transacaoRepository.delete(transacao);
     }
 
-    public DadosResumoDashbord resumoDashbord(Long usuarioId){
+    public DadosResumoDashbord resumoDashboard(Long usuarioId){
         BigDecimal receitas = transacaoRepository.somarValoresPorTipoEUsuario(usuarioId, TipoTransacao.RECEITA);
         BigDecimal despesas = transacaoRepository.somarValoresPorTipoEUsuario(usuarioId, TipoTransacao.DESPESA);
 
