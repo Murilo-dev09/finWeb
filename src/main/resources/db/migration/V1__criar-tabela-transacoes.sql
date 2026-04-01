@@ -3,7 +3,7 @@ CREATE TABLE transacoes(
 
         descricao VARCHAR(255) NOT NULL,
         valor DECIMAL(10,2) NOT NULL,
-        data DATETIME,
+        data DATETIME NOT NULL,
         categoria VARCHAR(100) NOT NULL,
         tipoTransacao VARCHAR(100) NOT NULL,
 
