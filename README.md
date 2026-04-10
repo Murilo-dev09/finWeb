@@ -1,37 +1,31 @@
-# FinWeb - API de Controle Financeiro
+# 💰 FinWeb - Sistema de Controle Financeiro
 
-## Sobre o projeto
+API REST desenvolvida para gerenciamento financeiro pessoal, permitindo que cada usuário tenha controle completo sobre suas receitas e despesas.
 
-O **FinWeb** é uma API REST desenvolvida em Java com Spring Boot para gerenciamento financeiro pessoal.
-
-A aplicação permite que cada usuário tenha controle total sobre suas transações financeiras, garantindo segurança e isolamento de dados por meio de autenticação com JWT.
+O projeto foi construído com foco em boas práticas de desenvolvimento backend, incluindo autenticação, organização em camadas e isolamento de dados por usuário.
 
 ---
 
-##Funcionalidades
+## 🚀 Funcionalidades
 
-* Autenticação de usuários (login com token JWT)
 * Cadastro de usuários
-* CRUD completo de transações:
-  
-    * Criar transações
-    * Listar transações
-    * Atualizar transações
-    * Deletar transações
+* Autenticação com JWT
+* CRUD completo de transações
 * Filtro de transações por categoria
 * Dashboard financeiro com:
-  
-    * Total de receitas
-    * Total de despesas
-    * Saldo final
+
+  * Total de receitas
+  * Total de despesas
+  * Saldo final
 
 ---
 
-## Segurança
+## 🔐 Segurança
 
-* Autenticação baseada em **JWT (JSON Web Token)**
+* Autenticação baseada em JWT
+* Proteção de rotas com Spring Security
 * Cada usuário acessa apenas seus próprios dados
-* As requisições são protegidas via token no header:
+* Uso de token no header:
 
 ```
 Authorization: Bearer SEU_TOKEN
@@ -39,72 +33,66 @@ Authorization: Bearer SEU_TOKEN
 
 ---
 
-## Tecnologias utilizadas
+## ⚙️ Tecnologias utilizadas
 
 * Java
 * Spring Boot
 * Spring Security
-* JWT (Auth0)
+* JWT
 * JPA / Hibernate
 * Banco de dados relacional
 
 ---
 
-## Endpoints principais
+## 🧱 Estrutura do projeto
 
-### Autenticação
+O projeto segue o padrão de arquitetura em camadas:
 
-* `POST /login`
-
-### Cadastrar Usuários
-
-* `POST /login/cadastrar`
-
-### Transações
-
-* `GET /transacoes` -> Listar
-* `POST /transacoes` -> Cadastrar
-* `PUT /transacoes` -> Atualizar
-* `DELETE /transacoes/{id}` -> Deletar por id
-
-### Filtro por categoria
-
-* `GET /transacoes/por-categoria` -> Listar por categorias de despesas
-
-### Dashboard
-
-* `GET /transacoes/dashboard` -> DashBoard de todas as receitas/despesas e seu saldo final
+controller → endpoints da API
+service → regras de negócio
+repository → acesso ao banco
+security → autenticação e filtros JWT
+dto → comunicação entre camadas
 
 ---
 
-## Estrutura do projeto
+## 📌 Principais endpoints
 
-* `controller` → endpoints da API
-* `service` → regras de negócio
-* `repository` → acesso ao banco
-* `security` → autenticação e filtros JWT
-* `dto` → comunicação entre camadas
+### 🔑 Autenticação
+
+* POST /login
+* POST /login/cadastrar
+
+### 💸 Transações
+
+* GET /transacoes
+* POST /transacoes
+* PUT /transacoes
+* DELETE /transacoes/{id}
+
+### 📊 Dashboard
+
+* GET /transacoes/dashboard
 
 ---
 
-## Como executar o projeto
+## ▶️ Como executar o projeto
 
-1. Clone o repositório:
+Clone o repositório:
 
+```bash
+git clone https://github.com/Murilo-dev09/finWeb.git
 ```
-git clone https://github.com/seu-usuario/finweb.git](https://github.com/Murilo-dev09/finWeb.git
 
-```
+Configure o banco de dados no `application.properties`
 
-2. Configure o banco de dados no `application.properties`
+Execute a aplicação:
 
-3. Execute a aplicação:
-
-```
+```bash
 ./mvnw spring-boot:run
 ```
 
-4. Acesse o Swagger:
+Acesse o Swagger:
 
 ```
 http://localhost:8080/swagger-ui.html
@@ -112,14 +100,23 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
-## Próximos passos
+## 🔄 Próximos passos
 
 * Desenvolvimento do front-end
-* Melhorias na experiência do usuário
 * Deploy da aplicação
+* Melhorias na experiência do usuário
 
 ---
 
-## Autor
+## 👨‍💻 Autor
 
 Desenvolvido por Murilo Morales
+
+
+<img width="1807" height="905" alt="dashboard" src="https://github.com/user-attachments/assets/77e40ec2-6b98-4ef8-90fa-85adca497425" />
+<img width="1453" height="664" alt="a" src="https://github.com/user-attachments/assets/b29ded7a-061b-44ce-9f86-a751ea2e300d" />
+<img width="1919" height="1033" alt="intel" src="https://github.com/user-attachments/assets/b0f46e67-3625-4be5-aaac-7646e7af039a" />
+<img width="1919" height="1035" alt="vs" src="https://github.com/user-attachments/assets/4ec62f2c-7152-48fc-a077-27e5c5f399ab" />
+
+
+
