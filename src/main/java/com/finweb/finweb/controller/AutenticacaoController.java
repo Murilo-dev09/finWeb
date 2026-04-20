@@ -18,7 +18,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/login")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://finweb-qc82.onrender.com")
 public class AutenticacaoController {
 
     private final UsuarioService usuarioService;
