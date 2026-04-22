@@ -15,7 +15,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("transacoes")
-@CrossOrigin(origins = "https://finweb-qc82.onrender.com")
 public class TransacaoController {
 
     private TransacaoService service;
