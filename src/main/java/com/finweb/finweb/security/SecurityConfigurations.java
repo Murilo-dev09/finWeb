@@ -65,7 +65,7 @@ public class SecurityConfigurations {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(Arrays.asList("https://finweb-qc82.onrender.com", "https://finweb-qc82.onrender.com/"));
+        corsConfiguration.setAllowedOrigins(Arrays.asList("https://finweb-front.onrender.com", "https://finweb-front.onrender.com/"));
         corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"));
         corsConfiguration.setAllowedHeaders(List.of(
                 "Authorization",
