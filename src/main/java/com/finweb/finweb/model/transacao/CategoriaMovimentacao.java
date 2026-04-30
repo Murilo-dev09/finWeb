@@ -13,10 +13,12 @@ public enum CategoriaMovimentacao {
     ENERGIA,
     AGUA,
     GASOLINA,
-    OUTROS,
+    CAIXINHA,
     INTERNET,
     VALE,
     SALARIO,
     RENDA_EXTRA,
-    VENDA
+    VENDA,
+    POUPANCA,
+    OUTROS
 }
