@@ -38,7 +38,7 @@ public class SecurityConfigurations {
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                                .requestMatchers("/swagger-ui.html", "/login/cadastrar", "/login", "/v3/api-docs/**", "/swagger-ui/**").permitAll()
+                                .requestMatchers("/swagger-ui.html", "/login/cadastrar", "/login", "/v3/api-docs/**", "/swagger-ui/**", "/manter").permitAll()
                                 .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex -> ex
