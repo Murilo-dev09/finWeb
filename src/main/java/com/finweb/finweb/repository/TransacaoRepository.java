@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public interface TransacaoRepository extends JpaRepository<Transacao, Long> {
 
@@ -18,6 +19,8 @@ public interface TransacaoRepository extends JpaRepository<Transacao, Long> {
         Page<Transacao> findByUsuarioIdAndTipoTransacao(Long usuarioId, TipoTransacao tipoTransacao, Pageable paginacao);
 
         Page<Transacao> findByUsuarioIdOrderByDataDesc(Long usuarioId, Pageable paginacao);
+
+        List<Transacao> findAllByUsuarioIdOrderByDataDesc(Long usuarioId);
 
         @Query("SELECT SUM(t.valor) FROM Transacao t WHERE t.usuario.id = :usuarioId AND t.categoria = :categoria")
         BigDecimal somarValoresPorCategoriaEUsuario(@Param("categoria") CategoriaMovimentacao categoria,@Param("usuarioId") Long usuarioId);
