@@ -2,9 +2,6 @@ package com.finweb.finweb.controller;
 
 import com.finweb.finweb.model.usuario.Usuario;
 import com.finweb.finweb.service.RelatorioService;
-import org.springdoc.core.annotations.ParameterObject;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

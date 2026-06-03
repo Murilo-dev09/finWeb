@@ -1,11 +1,7 @@
 package com.finweb.finweb.service;
 
-import com.finweb.finweb.model.transacao.DadosListagemTransacao;
-import com.finweb.finweb.model.transacao.DadosResumoDashbord;
 import com.finweb.finweb.model.transacao.Transacao;
-import com.finweb.finweb.model.usuario.Usuario;
 import com.finweb.finweb.repository.TransacaoRepository;
-import com.finweb.finweb.repository.UsuarioRepository;
 import com.lowagie.text.Document;
 import com.lowagie.text.Element;
 import com.lowagie.text.Paragraph;
@@ -13,8 +9,6 @@ import com.lowagie.text.Phrase;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.io.ByteArrayOutputStream;
 import java.text.NumberFormat;

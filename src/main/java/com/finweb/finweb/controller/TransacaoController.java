@@ -33,7 +33,7 @@ public class TransacaoController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<DadosListagemTransacao>> listarTransacoes(@ParameterObject @PageableDefault( size = 10, sort = {" data"})Pageable paginacao, @AuthenticationPrincipal Usuario logado){
+    public ResponseEntity<Page<DadosListagemTransacao>> listarTransacoes(@ParameterObject @PageableDefault( size = 10, sort = {"data"})Pageable paginacao, @AuthenticationPrincipal Usuario logado){
         return ResponseEntity.ok(service.listarTransacoes(paginacao, logado.getId()));
     }
 
